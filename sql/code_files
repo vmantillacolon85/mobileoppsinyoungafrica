@@ -1,0 +1,152 @@
+--1.  What countries have the highest percentage of people age 0-14 years in 2014?"
+
+select i.CountryCode, Shortname, IncomeGroup, Region, IndicatorName, i.Year, AVG(i.value) as Value
+from Country c 
+join Indicators i 
+on c.CountryCode = i.CountryCode 
+where IndicatorName = 'Population, ages 0-14 (% of total)' and i.Year = 2014
+group by i.CountryCode
+order by Value desc
+limit 5
+
+--2.  What countries have the highest percentage of people age 15-64 years in 2014?"
+
+
+select i.CountryCode, Shortname, IncomeGroup, Region, IndicatorName, i.Year, AVG(i.value) as Value
+from Country c 
+join Indicators i 
+on c.CountryCode = i.CountryCode 
+where IndicatorName = 'Population, ages 15-64 (% of total)' and i.Year = 2014
+group by i.CountryCode
+order by Value desc
+limit 5
+
+--
+--3.  What countries have the highest percentage of people ages 65 and above in 2014?"
+
+
+select i.CountryCode, Shortname, IncomeGroup, Region, IndicatorName, i.Year, AVG(i.value) as Value
+from Country c 
+join Indicators i 
+on c.CountryCode = i.CountryCode 
+where IndicatorName = 'Population ages 65 and above (% of total)' and i.Year = 2014
+group by i.CountryCode
+order by Value desc
+limit 5
+
+------
+
+/* 4.  What is the total population in the top 5 countries with the youngest population? */
+
+-- in 2014
+select i.CountryCode, Shortname, IncomeGroup, Region, IndicatorName, i.Year, AVG(i.value) as Value
+from Country c 
+join Indicators i 
+on c.CountryCode = i.CountryCode 
+where IndicatorName = 'Population, total' and i.Year = 2014 and i.CountryCode IN ('NER',
+'UGA',
+'TCD',
+'AGO',
+'MLI')
+group by i.CountryCode, Year
+order by Value DESC
+
+--or throughout the years 
+
+select i.CountryCode, Shortname, IncomeGroup, Region, IndicatorName, i.Year, AVG(i.value) as Value
+from Country c 
+join Indicators i 
+on c.CountryCode = i.CountryCode 
+where IndicatorName = 'Population, total' and i.CountryCode IN ('NER',
+'UGA',
+'TCD',
+'AGO',
+'MLI')
+group by i.CountryCode, Year
+order by Value DESC
+
+
+--or comparing the top 2 in each of the three categories
+
+select i.CountryCode, Shortname, IncomeGroup, Region, IndicatorName, i.Year, AVG(i.value) as Value
+from Country c 
+join Indicators i 
+on c.CountryCode = i.CountryCode 
+where IndicatorName = 'Population, total' and i.CountryCode IN ('NER',
+'UGA',
+'ARE',
+'QAT',
+'JPN',
+'ITA')
+group by i.CountryCode, Year
+order by Value DESC
+
+
+
+--5.  What is the total population of the top 5 countries with people 15-64?
+
+
+--in 2014
+
+select i.CountryCode, Shortname, IncomeGroup, Region, IndicatorName, i.Year, AVG(i.value) as Value
+from Country c 
+join Indicators i 
+on c.CountryCode = i.CountryCode 
+where IndicatorName = 'Population, total' and i.Year = 2014 and i.CountryCode IN (
+'ARE',
+'QAT',
+'MAC',
+'BHR',
+'OMN')
+group by i.CountryCode, Year
+order by Value DESC
+
+--or throughout the years
+
+select i.CountryCode, Shortname, IncomeGroup, Region, IndicatorName, i.Year, AVG(i.value) as Value
+from Country c 
+join Indicators i 
+on c.CountryCode = i.CountryCode 
+where IndicatorName = 'Population, total' and i.CountryCode IN (
+'ARE',
+'QAT',
+'MAC',
+'BHR',
+'OMN')
+group by i.CountryCode, Year
+order by Value DESC
+
+
+--6.  What is the total population of the top 5 counries with people 65 and above?
+
+--in 2014
+
+select i.CountryCode, Shortname, IncomeGroup, Region, IndicatorName, i.Year, AVG(i.value) as Value
+from Country c 
+join Indicators i 
+on c.CountryCode = i.CountryCode 
+where IndicatorName = 'Population, total' and i.Year = 2014 and i.CountryCode IN (
+'JPN',
+'ITA',
+'DEU',
+'GRC',
+'PRT')
+group by i.CountryCode, Year
+order by Value DESC
+
+--or throughout the years 
+
+select i.CountryCode, Shortname, IncomeGroup, Region, IndicatorName, i.Year, AVG(i.value) as Value
+from Country c 
+join Indicators i 
+on c.CountryCode = i.CountryCode 
+where IndicatorName = 'Population, total' and i.CountryCode IN (
+'JPN',
+'ITA',
+'DEU',
+'GRC',
+'PRT')
+group by i.CountryCode, Year
+order by Value DESC
+
+---------
