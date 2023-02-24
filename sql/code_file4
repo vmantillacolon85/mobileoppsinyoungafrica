@@ -1,0 +1,407 @@
+--22. What is the birth rate in the top 5 countries with the youngest population? */
+
+--in 2014--no results show for year 2014-incomplete data
+
+select i.CountryCode, Shortname, IncomeGroup, Region, IndicatorName, i.Year, AVG(i.value) as Value
+from Country c 
+join Indicators i 
+on c.CountryCode = i.CountryCode 
+where IndicatorName = 'Birth rate, crude (per 1,000 people)' and i.Year = 2014 and i.CountryCode IN ('NER',
+'UGA',
+'TCD',
+'AGO',
+'MLI')
+group by i.CountryCode, Year
+order by Value DESC
+
+--or throughout the years 
+
+select i.CountryCode, Shortname, IncomeGroup, Region, IndicatorName, i.Year, AVG(i.value) as Value
+from Country c 
+join Indicators i 
+on c.CountryCode = i.CountryCode 
+where IndicatorName = 'Birth rate, crude (per 1,000 people)' and i.CountryCode IN ('NER',
+'UGA',
+'TCD',
+'AGO',
+'MLI')
+group by i.CountryCode, Year
+order by Value DESC
+
+
+
+--23.  What is the birth rate of the top 5 countries with people 15-64?
+
+
+--in 2014--no results show for year 2014-incomplete data
+
+select i.CountryCode, Shortname, IncomeGroup, Region, IndicatorName, i.Year, AVG(i.value) as Value
+from Country c 
+join Indicators i 
+on c.CountryCode = i.CountryCode 
+where IndicatorName = 'Birth rate, crude (per 1,000 people)' and i.Year = 2014 and i.CountryCode IN (
+'ARE',
+'QAT',
+'MAC',
+'BHR',
+'OMN')
+group by i.CountryCode, Year
+order by Value DESC
+
+--or throughout the years 
+
+select i.CountryCode, Shortname, IncomeGroup, Region, IndicatorName, i.Year, AVG(i.value) as Value
+from Country c 
+join Indicators i 
+on c.CountryCode = i.CountryCode 
+where IndicatorName = 'Birth rate, crude (per 1,000 people)' and i.CountryCode IN (
+'ARE',
+'QAT',
+'MAC',
+'BHR',
+'OMN')
+group by i.CountryCode, Year
+order by Value DESC
+
+
+
+--24.  What is the birth rate of the top 5 counries with people 65 and above?
+
+--in 2014--no results show for year 2014-incomplete data
+
+select i.CountryCode, Shortname, IncomeGroup, Region, IndicatorName, i.Year, AVG(i.value) as Value
+from Country c 
+join Indicators i 
+on c.CountryCode = i.CountryCode 
+where IndicatorName = 'Birth rate, crude (per 1,000 people)' and i.Year = 2014 and i.CountryCode IN (
+'JPN',
+'ITA',
+'DEU',
+'GRC',
+'PRT')
+group by i.CountryCode, Year
+order by Value DESC
+
+--or throughout the years
+
+
+select i.CountryCode, Shortname, IncomeGroup, Region, IndicatorName, i.Year, AVG(i.value) as Value
+from Country c 
+join Indicators i 
+on c.CountryCode = i.CountryCode 
+where IndicatorName = 'Birth rate, crude (per 1,000 people)'  and i.CountryCode IN (
+'JPN',
+'ITA',
+'DEU',
+'GRC',
+'PRT')
+group by i.CountryCode, Year
+order by Value DESC
+
+
+------------------
+
+--25. What is the fertility rate in the top 5 countries with the youngest population? */
+
+--in 2014--no results show for year 2014-incomplete data
+
+select i.CountryCode, Shortname, IncomeGroup, Region, IndicatorName, i.Year, AVG(i.value) as Value
+from Country c 
+join Indicators i 
+on c.CountryCode = i.CountryCode 
+where IndicatorName = 'Fertility rate, total (births per woman)' and i.Year = 2014 and i.CountryCode IN ('NER',
+'UGA',
+'TCD',
+'AGO',
+'MLI')
+group by i.CountryCode, Year
+order by Value DESC
+
+--or throughout the years 
+
+select i.CountryCode, Shortname, IncomeGroup, Region, IndicatorName, i.Year, AVG(i.value) as Value
+from Country c 
+join Indicators i 
+on c.CountryCode = i.CountryCode 
+where IndicatorName = 'Fertility rate, total (births per woman)' and i.CountryCode IN ('NER',
+'UGA',
+'TCD',
+'AGO',
+'MLI')
+group by i.CountryCode, Year
+order by Value DESC
+
+
+
+--26.  What is the fertility rate of the top 5 countries with people 15-64?
+
+
+--in 2014--no results show for year 2014-incomplete data
+
+select i.CountryCode, Shortname, IncomeGroup, Region, IndicatorName, i.Year, AVG(i.value) as Value
+from Country c 
+join Indicators i 
+on c.CountryCode = i.CountryCode 
+where IndicatorName = 'Fertility rate, total (births per woman)' and i.Year = 2014 and i.CountryCode IN (
+'ARE',
+'QAT',
+'MAC',
+'BHR',
+'OMN')
+group by i.CountryCode, Year
+order by Value DESC
+
+--or throughout the years 
+
+select i.CountryCode, Shortname, IncomeGroup, Region, IndicatorName, i.Year, AVG(i.value) as Value
+from Country c 
+join Indicators i 
+on c.CountryCode = i.CountryCode 
+where IndicatorName = 'Fertility rate, total (births per woman)' and i.CountryCode IN (
+'ARE',
+'QAT',
+'MAC',
+'BHR',
+'OMN')
+group by i.CountryCode, Year
+order by Value DESC
+
+
+
+--27.  What is the birth rate of the top 5 counries with people 65 and above?
+
+--in 2014--no results show for year 2014-incomplete data
+
+select i.CountryCode, Shortname, IncomeGroup, Region, IndicatorName, i.Year, AVG(i.value) as Value
+from Country c 
+join Indicators i 
+on c.CountryCode = i.CountryCode 
+where IndicatorName = 'Fertility rate, total (births per woman)' and i.Year = 2014 and i.CountryCode IN (
+'JPN',
+'ITA',
+'DEU',
+'GRC',
+'PRT')
+group by i.CountryCode, Year
+order by Value DESC
+
+--or throughout the years
+
+
+select i.CountryCode, Shortname, IncomeGroup, Region, IndicatorName, i.Year, AVG(i.value) as Value
+from Country c 
+join Indicators i 
+on c.CountryCode = i.CountryCode 
+where IndicatorName = 'Fertility rate, total (births per woman)'  and i.CountryCode IN (
+'JPN',
+'ITA',
+'DEU',
+'GRC',
+'PRT')
+group by i.CountryCode, Year
+order by Value DESC
+
+
+------------------
+--25. What is the life expectancy at birth in the top 5 countries with the youngest population? */
+
+--in 2014--no results show for year 2014-incomplete data
+
+select i.CountryCode, Shortname, IncomeGroup, Region, IndicatorName, i.Year, AVG(i.value) as Value
+from Country c 
+join Indicators i 
+on c.CountryCode = i.CountryCode 
+where IndicatorName = 'Life expectancy at birth, total (years)' and i.Year = 2014 and i.CountryCode IN ('NER',
+'UGA',
+'TCD',
+'AGO',
+'MLI')
+group by i.CountryCode, Year
+order by Value DESC
+
+--or throughout the years 
+
+select i.CountryCode, Shortname, IncomeGroup, Region, IndicatorName, i.Year, AVG(i.value) as Value
+from Country c 
+join Indicators i 
+on c.CountryCode = i.CountryCode 
+where IndicatorName = 'Life expectancy at birth, total (years)' and i.CountryCode IN ('NER',
+'UGA',
+'TCD',
+'AGO',
+'MLI')
+group by i.CountryCode, Year
+order by Value DESC
+
+
+
+--26.  What is the life expectancy at birth of the top 5 countries with people 15-64?
+
+
+--in 2014--no results show for year 2014-incomplete data
+
+select i.CountryCode, Shortname, IncomeGroup, Region, IndicatorName, i.Year, AVG(i.value) as Value
+from Country c 
+join Indicators i 
+on c.CountryCode = i.CountryCode 
+where IndicatorName = 'Life expectancy at birth, total (years)' and i.Year = 2014 and i.CountryCode IN (
+'ARE',
+'QAT',
+'MAC',
+'BHR',
+'OMN')
+group by i.CountryCode, Year
+order by Value DESC
+
+--or throughout the years 
+
+select i.CountryCode, Shortname, IncomeGroup, Region, IndicatorName, i.Year, AVG(i.value) as Value
+from Country c 
+join Indicators i 
+on c.CountryCode = i.CountryCode 
+where IndicatorName = 'Life expectancy at birth, total (years)' and i.CountryCode IN (
+'ARE',
+'QAT',
+'MAC',
+'BHR',
+'OMN')
+group by i.CountryCode, Year
+order by Value DESC
+
+
+
+--27.  What is the life expectancy at birth of the top 5 counries with people 65 and above?
+
+--in 2014--no results show for year 2014-incomplete data
+
+select i.CountryCode, Shortname, IncomeGroup, Region, IndicatorName, i.Year, AVG(i.value) as Value
+from Country c 
+join Indicators i 
+on c.CountryCode = i.CountryCode 
+where IndicatorName = 'Life expectancy at birth, total (years)' and i.Year = 2014 and i.CountryCode IN (
+'JPN',
+'ITA',
+'DEU',
+'GRC',
+'PRT')
+group by i.CountryCode, Year
+order by Value DESC
+
+--or throughout the years
+
+
+select i.CountryCode, Shortname, IncomeGroup, Region, IndicatorName, i.Year, AVG(i.value) as Value
+from Country c 
+join Indicators i 
+on c.CountryCode = i.CountryCode 
+where IndicatorName = 'Life expectancy at birth, total (years)'  and i.CountryCode IN (
+'JPN',
+'ITA',
+'DEU',
+'GRC',
+'PRT')
+group by i.CountryCode, Year
+order by Value DESC
+
+----------------
+
+--28. What is the percentage of working age people in the top 5 countries with the youngest population? */
+
+--in 2014--no results show for year 2014-incomplete data
+
+select i.CountryCode, Shortname, IncomeGroup, Region, IndicatorName, i.Year, AVG(i.value) as Value
+from Country c 
+join Indicators i 
+on c.CountryCode = i.CountryCode 
+where IndicatorName = 'Age dependency ratio (% of working-age population)' and i.Year = 2014 and i.CountryCode IN ('NER',
+'UGA',
+'TCD',
+'AGO',
+'MLI')
+group by i.CountryCode, Year
+order by Value DESC
+
+--or throughout the years 
+
+select i.CountryCode, Shortname, IncomeGroup, Region, IndicatorName, i.Year, AVG(i.value) as Value
+from Country c 
+join Indicators i 
+on c.CountryCode = i.CountryCode 
+where IndicatorName = 'Age dependency ratio (% of working-age population)' and i.CountryCode IN ('NER',
+'UGA',
+'TCD',
+'AGO',
+'MLI')
+group by i.CountryCode, Year
+order by Value DESC
+
+
+
+--29.  What is the percentage of working age people of the top 5 countries with people 15-64?
+
+
+--in 2014--no results show for year 2014-incomplete data
+
+select i.CountryCode, Shortname, IncomeGroup, Region, IndicatorName, i.Year, AVG(i.value) as Value
+from Country c 
+join Indicators i 
+on c.CountryCode = i.CountryCode 
+where IndicatorName = 'Age dependency ratio (% of working-age population)' and i.Year = 2014 and i.CountryCode IN (
+'ARE',
+'QAT',
+'MAC',
+'BHR',
+'OMN')
+group by i.CountryCode, Year
+order by Value DESC
+
+--or throughout the years 
+
+select i.CountryCode, Shortname, IncomeGroup, Region, IndicatorName, i.Year, AVG(i.value) as Value
+from Country c 
+join Indicators i 
+on c.CountryCode = i.CountryCode 
+where IndicatorName = 'Age dependency ratio (% of working-age population)' and i.CountryCode IN (
+'ARE',
+'QAT',
+'MAC',
+'BHR',
+'OMN')
+group by i.CountryCode, Year
+order by Value DESC
+
+
+
+--30.  What is the percentage of working age people of the top 5 counries with people 65 and above?
+
+--in 2014--no results show for year 2014-incomplete data
+
+select i.CountryCode, Shortname, IncomeGroup, Region, IndicatorName, i.Year, AVG(i.value) as Value
+from Country c 
+join Indicators i 
+on c.CountryCode = i.CountryCode 
+where IndicatorName = 'Age dependency ratio (% of working-age population)' and i.Year = 2014 and i.CountryCode IN (
+'JPN',
+'ITA',
+'DEU',
+'GRC',
+'PRT')
+group by i.CountryCode, Year
+order by Value DESC
+
+--or throughout the years
+
+
+select i.CountryCode, Shortname, IncomeGroup, Region, IndicatorName, i.Year, AVG(i.value) as Value
+from Country c 
+join Indicators i 
+on c.CountryCode = i.CountryCode 
+where IndicatorName = 'Age dependency ratio (% of working-age population)'  and i.CountryCode IN (
+'JPN',
+'ITA',
+'DEU',
+'GRC',
+'PRT')
+group by i.CountryCode, Year
+order by Value DESC
+-----------------
