@@ -11,6 +11,10 @@ The CIA World Factbook gives the world annual birthrate, mortality rate, and gro
 The last 100 years have seen a massive fourfold increase in the population, due to medical advances, lower mortality rates, and an increase in agricultural productivity made possible by the Green Revolution.
 
 
+By 2100, the UN projects the population in Sub-Saharan Africa will reach 3.8 billion.
+
+
+
 
 
 
