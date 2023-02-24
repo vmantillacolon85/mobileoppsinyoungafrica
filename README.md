@@ -8,6 +8,11 @@ The world population growth rate peaked in 1963 at 2.2% per year and subsequentl
 
 The CIA World Factbook gives the world annual birthrate, mortality rate, and growth rate as 1.86%, 0.78%, and 1.08% respectively.
 
+The last 100 years have seen a massive fourfold increase in the population, due to medical advances, lower mortality rates, and an increase in agricultural productivity made possible by the Green Revolution.
+
+
+
+
 
 [Mobile Opportunities in Young Africa.pptx](https://github.com/vmantillacolon85/mobileoppsinyoungafrica/files/10828571/Mobile.Opportunities.in.Young.Africa.pptx)
 
