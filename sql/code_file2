@@ -1,0 +1,301 @@
+--7. What is the total GDP per capita in the top 5 countries with the youngest population? */
+
+--with year 2014
+
+select i.CountryCode, Shortname, IncomeGroup, Region, IndicatorName, i.Year, AVG(i.value) as Value
+from Country c 
+join Indicators i 
+on c.CountryCode = i.CountryCode 
+where IndicatorName = 'GDP per capita (current US$)' and i.Year = 2014 and i.CountryCode IN ('NER',
+'UGA',
+'TCD',
+'AGO',
+'MLI')
+group by i.CountryCode, Year
+order by Value DESC
+
+--or throughout the years
+
+select i.CountryCode, Shortname, IncomeGroup, Region, IndicatorName, i.Year, AVG(i.value) as Value
+from Country c 
+join Indicators i 
+on c.CountryCode = i.CountryCode 
+where IndicatorName = 'GDP per capita (current US$)' and i.CountryCode IN ('NER',
+'UGA',
+'TCD',
+'AGO',
+'MLI')
+group by i.CountryCode, Year
+order by Value DESC
+
+
+
+--8.  What is the total GDP per capita of the top 5 countries with people 15-64?
+
+--with year 2014
+
+select i.CountryCode, Shortname, IncomeGroup, Region, IndicatorName, i.Year, AVG(i.value) as Value
+from Country c 
+join Indicators i 
+on c.CountryCode = i.CountryCode 
+where IndicatorName = 'GDP per capita (current US$)' and i.Year = 2014 and i.CountryCode IN (
+'ARE',
+'QAT',
+'MAC',
+'BHR',
+'OMN')
+group by i.CountryCode, Year
+order by Value DESC
+
+--or throughout the years
+
+select i.CountryCode, Shortname, IncomeGroup, Region, IndicatorName, i.Year, AVG(i.value) as Value
+from Country c 
+join Indicators i 
+on c.CountryCode = i.CountryCode 
+where IndicatorName = 'GDP per capita (current US$)' and i.CountryCode IN (
+'ARE',
+'QAT',
+'MAC',
+'BHR',
+'OMN')
+group by i.CountryCode, Year
+order by Value DESC
+
+--9.  What is the total GDP per capita of the top 5 counries with people 65 and above?
+
+--in 2014
+
+select i.CountryCode, Shortname, IncomeGroup, Region, IndicatorName, i.Year, AVG(i.value) as Value
+from Country c 
+join Indicators i 
+on c.CountryCode = i.CountryCode 
+where IndicatorName = 'GDP per capita (current US$)' and i.Year = 2014 and i.CountryCode IN (
+'JPN',
+'ITA',
+'DEU',
+'GRC',
+'PRT')
+group by i.CountryCode, Year
+order by Value DESC
+
+
+--or  throughout the years
+
+select i.CountryCode, Shortname, IncomeGroup, Region, IndicatorName, i.Year, AVG(i.value) as Value
+from Country c 
+join Indicators i 
+on c.CountryCode = i.CountryCode 
+where IndicatorName = 'GDP per capita (current US$)'  and i.CountryCode IN (
+'JPN',
+'ITA',
+'DEU',
+'GRC',
+'PRT')
+group by i.CountryCode, Year
+order by Value DESC
+
+------------------
+--10.  What is the total population growth in the top 5 countries with the youngest population? */
+
+--in 2014
+
+select i.CountryCode, Shortname, IncomeGroup, Region, IndicatorName, i.Year, AVG(i.value) as Value
+from Country c 
+join Indicators i 
+on c.CountryCode = i.CountryCode 
+where IndicatorName = 'Population growth (annual %)' and i.Year = 2014 and i.CountryCode IN ('NER',
+'UGA',
+'TCD',
+'AGO',
+'MLI')
+group by i.CountryCode, Year
+order by Value DESC
+
+--or throughout the years 
+
+select i.CountryCode, Shortname, IncomeGroup, Region, IndicatorName, i.Year, AVG(i.value) as Value
+from Country c 
+join Indicators i 
+on c.CountryCode = i.CountryCode 
+where IndicatorName = 'Population growth (annual %)' and i.CountryCode IN ('NER',
+'UGA',
+'TCD',
+'AGO',
+'MLI')
+group by i.CountryCode, Year
+order by Value DESC
+
+
+
+--11.  What is the total population growth of the top 5 countries with people 15-64?
+
+
+--in 2014
+
+select i.CountryCode, Shortname, IncomeGroup, Region, IndicatorName, i.Year, AVG(i.value) as Value
+from Country c 
+join Indicators i 
+on c.CountryCode = i.CountryCode 
+where IndicatorName = 'Population growth (annual %)' and i.Year = 2014 and i.CountryCode IN (
+'ARE',
+'QAT',
+'MAC',
+'BHR',
+'OMN')
+group by i.CountryCode, Year
+order by Value DESC
+
+--or throughout the years 
+
+select i.CountryCode, Shortname, IncomeGroup, Region, IndicatorName, i.Year, AVG(i.value) as Value
+from Country c 
+join Indicators i 
+on c.CountryCode = i.CountryCode 
+where IndicatorName = 'Population growth (annual %)' and i.CountryCode IN (
+'ARE',
+'QAT',
+'MAC',
+'BHR',
+'OMN')
+group by i.CountryCode, Year
+order by Value DESC
+
+
+
+--12.  What is the total population growth of the top 5 counries with people 65 and above?
+
+--in 2014
+
+select i.CountryCode, Shortname, IncomeGroup, Region, IndicatorName, i.Year, AVG(i.value) as Value
+from Country c 
+join Indicators i 
+on c.CountryCode = i.CountryCode 
+where IndicatorName = 'Population growth (annual %)' and i.Year = 2014 and i.CountryCode IN (
+'JPN',
+'ITA',
+'DEU',
+'GRC',
+'PRT')
+group by i.CountryCode, Year
+order by Value DESC
+
+--or throughout the years
+
+
+select i.CountryCode, Shortname, IncomeGroup, Region, IndicatorName, i.Year, AVG(i.value) as Value
+from Country c 
+join Indicators i 
+on c.CountryCode = i.CountryCode 
+where IndicatorName = 'Population growth (annual %)'  and i.CountryCode IN (
+'JPN',
+'ITA',
+'DEU',
+'GRC',
+'PRT')
+group by i.CountryCode, Year
+order by Value DESC
+
+------------------
+
+--13. What is the total mobile cellular subscriptions in the top 5 countries with the youngest population? */
+
+--in 2014
+
+select i.CountryCode, Shortname, IncomeGroup, Region, IndicatorName, i.Year, AVG(i.value) as Value
+from Country c 
+join Indicators i 
+on c.CountryCode = i.CountryCode 
+where IndicatorName = 'Mobile cellular subscriptions' and i.Year = 2014 and i.CountryCode IN ('NER',
+'UGA',
+'TCD',
+'AGO',
+'MLI')
+group by i.CountryCode, Year
+order by Value DESC
+
+--or throughout the years 
+
+select i.CountryCode, Shortname, IncomeGroup, Region, IndicatorName, i.Year, AVG(i.value) as Value
+from Country c 
+join Indicators i 
+on c.CountryCode = i.CountryCode 
+where IndicatorName = 'Mobile cellular subscriptions' and i.CountryCode IN ('NER',
+'UGA',
+'TCD',
+'AGO',
+'MLI')
+group by i.CountryCode, Year
+order by Value DESC
+
+
+
+--14.  What is the total mobile cellular subscriptions of the top 5 countries with people 15-64?
+
+
+--in 2014
+
+select i.CountryCode, Shortname, IncomeGroup, Region, IndicatorName, i.Year, AVG(i.value) as Value
+from Country c 
+join Indicators i 
+on c.CountryCode = i.CountryCode 
+where IndicatorName = 'Mobile cellular subscriptions' and i.Year = 2014 and i.CountryCode IN (
+'ARE',
+'QAT',
+'MAC',
+'BHR',
+'OMN')
+group by i.CountryCode, Year
+order by Value DESC
+
+--or throughout the years 
+
+select i.CountryCode, Shortname, IncomeGroup, Region, IndicatorName, i.Year, AVG(i.value) as Value
+from Country c 
+join Indicators i 
+on c.CountryCode = i.CountryCode 
+where IndicatorName = 'Mobile cellular subscriptions' and i.CountryCode IN (
+'ARE',
+'QAT',
+'MAC',
+'BHR',
+'OMN')
+group by i.CountryCode, Year
+order by Value DESC
+
+
+
+--15.  What is the total mobile cellular subscriptions of the top 5 counries with people 65 and above?
+
+--in 2014
+
+select i.CountryCode, Shortname, IncomeGroup, Region, IndicatorName, i.Year, AVG(i.value) as Value
+from Country c 
+join Indicators i 
+on c.CountryCode = i.CountryCode 
+where IndicatorName = 'Mobile cellular subscriptions' and i.Year = 2014 and i.CountryCode IN (
+'JPN',
+'ITA',
+'DEU',
+'GRC',
+'PRT')
+group by i.CountryCode, Year
+order by Value DESC
+
+--or throughout the years
+
+
+select i.CountryCode, Shortname, IncomeGroup, Region, IndicatorName, i.Year, AVG(i.value) as Value
+from Country c 
+join Indicators i 
+on c.CountryCode = i.CountryCode 
+where IndicatorName = 'Mobile cellular subscriptions'  and i.CountryCode IN (
+'JPN',
+'ITA',
+'DEU',
+'GRC',
+'PRT')
+group by i.CountryCode, Year
+order by Value DESC
+
+-----
