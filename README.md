@@ -1,6 +1,13 @@
 # mobileoppsinyoungafrica
 Exploring the mobile opportunities present in countries in Africa with a significant population of young persons. 
 
+Population Insights
+
+
+The world population growth rate peaked in 1963 at 2.2% per year and subsequently declined.  In 2017, the estimated annual growth rate was 1.1%.
+
+
+
 
 [Mobile Opportunities in Young Africa.pptx](https://github.com/vmantillacolon85/mobileoppsinyoungafrica/files/10828571/Mobile.Opportunities.in.Young.Africa.pptx)
 
