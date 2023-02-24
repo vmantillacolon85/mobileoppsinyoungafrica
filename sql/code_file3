@@ -1,0 +1,212 @@
+--16. What is the total urban population in the top 5 countries with the youngest population? */
+
+--in 2014
+--can use urban population or Urban population (% of total) or Urban population growth (annual %)
+
+select i.CountryCode, Shortname, IncomeGroup, Region, IndicatorName, i.Year, AVG(i.value) as Value
+from Country c 
+join Indicators i 
+on c.CountryCode = i.CountryCode 
+where IndicatorName = 'Urban population' and i.Year = 2014 and i.CountryCode IN ('NER',
+'UGA',
+'TCD',
+'AGO',
+'MLI')
+group by i.CountryCode, Year
+order by Value DESC
+
+--or throughout the years 
+
+select i.CountryCode, Shortname, IncomeGroup, Region, IndicatorName, i.Year, AVG(i.value) as Value
+from Country c 
+join Indicators i 
+on c.CountryCode = i.CountryCode 
+where IndicatorName = 'Urban population' and i.CountryCode IN ('NER',
+'UGA',
+'TCD',
+'AGO',
+'MLI')
+group by i.CountryCode, Year
+order by Value DESC
+
+
+
+--17.  What is the total urban population of the top 5 countries with people 15-64?
+
+
+--in 2014
+--can use urban population or Urban population (% of total) or Urban population growth (annual %)
+
+select i.CountryCode, Shortname, IncomeGroup, Region, IndicatorName, i.Year, AVG(i.value) as Value
+from Country c 
+join Indicators i 
+on c.CountryCode = i.CountryCode 
+where IndicatorName = 'Urban population' and i.Year = 2014 and i.CountryCode IN (
+'ARE',
+'QAT',
+'MAC',
+'BHR',
+'OMN')
+group by i.CountryCode, Year
+order by Value DESC
+
+--or throughout the years 
+
+select i.CountryCode, Shortname, IncomeGroup, Region, IndicatorName, i.Year, AVG(i.value) as Value
+from Country c 
+join Indicators i 
+on c.CountryCode = i.CountryCode 
+where IndicatorName = 'Urban population' and i.CountryCode IN (
+'ARE',
+'QAT',
+'MAC',
+'BHR',
+'OMN')
+group by i.CountryCode, Year
+order by Value DESC
+
+
+
+--18.  What is the total urban population of the top 5 counries with people 65 and above?
+
+--in 2014
+--can use urban population or Urban population (% of total) or Urban population growth (annual %)
+
+select i.CountryCode, Shortname, IncomeGroup, Region, IndicatorName, i.Year, AVG(i.value) as Value
+from Country c 
+join Indicators i 
+on c.CountryCode = i.CountryCode 
+where IndicatorName = 'Urban population' and i.Year = 2014 and i.CountryCode IN (
+'JPN',
+'ITA',
+'DEU',
+'GRC',
+'PRT')
+group by i.CountryCode, Year
+order by Value DESC
+
+--or throughout the years
+
+
+select i.CountryCode, Shortname, IncomeGroup, Region, IndicatorName, i.Year, AVG(i.value) as Value
+from Country c 
+join Indicators i 
+on c.CountryCode = i.CountryCode 
+where IndicatorName = 'Urban population'  and i.CountryCode IN (
+'JPN',
+'ITA',
+'DEU',
+'GRC',
+'PRT')
+group by i.CountryCode, Year
+order by Value DESC
+
+
+-----------------------
+
+--19. What is the total rural population in the top 5 countries with the youngest population? */
+
+--in 2014
+--can use rural population or rural population (% of total) or rural population growth (annual %)
+
+select i.CountryCode, Shortname, IncomeGroup, Region, IndicatorName, i.Year, AVG(i.value) as Value
+from Country c 
+join Indicators i 
+on c.CountryCode = i.CountryCode 
+where IndicatorName = 'Rural population' and i.Year = 2014 and i.CountryCode IN ('NER',
+'UGA',
+'TCD',
+'AGO',
+'MLI')
+group by i.CountryCode, Year
+order by Value DESC
+
+--or throughout the years 
+
+select i.CountryCode, Shortname, IncomeGroup, Region, IndicatorName, i.Year, AVG(i.value) as Value
+from Country c 
+join Indicators i 
+on c.CountryCode = i.CountryCode 
+where IndicatorName = 'Rural population' and i.CountryCode IN ('NER',
+'UGA',
+'TCD',
+'AGO',
+'MLI')
+group by i.CountryCode, Year
+order by Value DESC
+
+
+
+--20.  What is the total rural population of the top 5 countries with people 15-64?
+
+
+--in 2014
+--can use rural population or rural population (% of total) or rural population growth (annual %)
+
+select i.CountryCode, Shortname, IncomeGroup, Region, IndicatorName, i.Year, AVG(i.value) as Value
+from Country c 
+join Indicators i 
+on c.CountryCode = i.CountryCode 
+where IndicatorName = 'Rural population' and i.Year = 2014 and i.CountryCode IN (
+'ARE',
+'QAT',
+'MAC',
+'BHR',
+'OMN')
+group by i.CountryCode, Year
+order by Value DESC
+
+--or throughout the years 
+
+select i.CountryCode, Shortname, IncomeGroup, Region, IndicatorName, i.Year, AVG(i.value) as Value
+from Country c 
+join Indicators i 
+on c.CountryCode = i.CountryCode 
+where IndicatorName = 'Rural population' and i.CountryCode IN (
+'ARE',
+'QAT',
+'MAC',
+'BHR',
+'OMN')
+group by i.CountryCode, Year
+order by Value DESC
+
+
+
+--21.  What is the total rural population of the top 5 counries with people 65 and above?
+
+--in 2014
+--can use rural population or rural population (% of total) or rural population growth (annual %)
+
+select i.CountryCode, Shortname, IncomeGroup, Region, IndicatorName, i.Year, AVG(i.value) as Value
+from Country c 
+join Indicators i 
+on c.CountryCode = i.CountryCode 
+where IndicatorName = 'Rural population' and i.Year = 2014 and i.CountryCode IN (
+'JPN',
+'ITA',
+'DEU',
+'GRC',
+'PRT')
+group by i.CountryCode, Year
+order by Value DESC
+
+--or throughout the years
+
+
+select i.CountryCode, Shortname, IncomeGroup, Region, IndicatorName, i.Year, AVG(i.value) as Value
+from Country c 
+join Indicators i 
+on c.CountryCode = i.CountryCode 
+where IndicatorName = 'Rural population'  and i.CountryCode IN (
+'JPN',
+'ITA',
+'DEU',
+'GRC',
+'PRT')
+group by i.CountryCode, Year
+order by Value DESC
+
+
+
+----------------------------
